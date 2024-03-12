@@ -33,11 +33,12 @@
                     <Button Style="{StaticResource BlackThemeButton}" Click="AddTour_Click" x:Name="AddTour" Content="Добавить турнир" Width="270" HorizontalAlignment="Left" Margin="5,10,10,0" Height="25"/>
                     <Button Style="{StaticResource BlackThemeButton}" Click="EdiTour_Click"  x:Name="EditTour" Content="Изменить турнир" Width="270" HorizontalAlignment="Left" Margin="5,10,10,0" Height="25" />
                     <Button Style="{StaticResource BlackThemeButton}" Click="DeleteTour_Click"  x:Name="DeleteTour" Content="Удалить турнир" Width="270" HorizontalAlignment="Left" Margin="5,10,10,0" Height="25"/>
-                    <Button Style="{StaticResource BlackThemeButton}" Click="Exit_Click"  x:Name="Exit" Content="Выход" Width="270" HorizontalAlignment="Left" Margin="5,40,10,5" Height="25"/>
+                    <Button Style="{StaticResource BlackThemeButton}" Click="Settings_Click"  x:Name="Settings" Content="Настройки" Width="270" HorizontalAlignment="Left" Margin="5,10,10,0" Height="25"/>
+                    <Button Style="{StaticResource BlackThemeButton}" Click="Exit_Click"  x:Name="Exit" Content="Выход" Width="270" HorizontalAlignment="Left" Margin="5,10,10,5" Height="25"/>
                 </StackPanel>
                 <StackPanel Margin="-5,5,5,0">
                     <TextBlock Style="{StaticResource BlackThemeHeader}" HorizontalAlignment="Left" Text="Команды-участники" VerticalAlignment="Top" Margin="5,5,5,0"/>
-                    <ListBox Style="{StaticResource BlackThemeListBox}" Width="350" HorizontalAlignment="Left" Margin="5,5,5,0" Height="300" SelectionMode="Extended">
+                    <ListBox Style="{StaticResource BlackThemeListBox}" Width="350" HorizontalAlignment="Left" Margin="5,5,5,0" Height="305" SelectionMode="Extended">
                         <TextBlock>Команда 1</TextBlock>
                         <TextBlock>Команда 2</TextBlock>
                         <TextBlock>Команда 3</TextBlock>

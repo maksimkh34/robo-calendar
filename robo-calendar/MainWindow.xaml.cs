@@ -63,5 +63,11 @@ namespace robo_calendar
         {
             Close();
         }
+
+        private void Settings_Click(object sender, RoutedEventArgs e)
+        {
+            Settings settings = new();
+            settings.ShowDialog();
+        }
     }
 }
