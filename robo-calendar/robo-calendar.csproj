@@ -1,0 +1,28 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>net8.0-windows</TargetFramework>
+    <RootNamespace>robo_calendar</RootNamespace>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <UseWPF>true</UseWPF>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="icons8-close-window-96.png" />
+    <None Remove="icons8-minimize-window-96.png" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Content Include="Res\Fonts\Nexa-Heavy.ttf">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+
+  <ItemGroup>
+    <Resource Include="icons8-close-window-96.png" />
+    <Resource Include="icons8-minimize-window-96.png" />
+  </ItemGroup>
+
+</Project>

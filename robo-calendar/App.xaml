@@ -1,0 +1,87 @@
+﻿<Application x:Class="robo_calendar.App"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:local="clr-namespace:robo_calendar"
+             StartupUri="MainWindow.xaml">
+    <Application.Resources>
+        <Style x:Key="BlackThemeButton" TargetType="Button">
+            
+            <Style.Setters>
+                <Setter Property="FontFamily" Value="Bahnschrift"/>
+                <Setter Property="FontSize" Value="13"/>
+                <Setter Property="Background" Value="#FF2C2D31"/>
+                <Setter Property="Foreground" Value="#FFE5E5EC"/>
+                <Setter Property="BorderBrush" Value="Black"/>
+                <Setter Property="Template">
+                    <Setter.Value>
+                        <ControlTemplate TargetType="{x:Type Button}">
+                            <Border Background="{TemplateBinding Background}" BorderBrush="Black" BorderThickness="1">
+                                <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"></ContentPresenter>
+                            </Border>
+                        </ControlTemplate>
+                    </Setter.Value>
+                </Setter>
+            </Style.Setters>
+            
+            <Style.Triggers>
+                <Trigger Property="IsMouseOver" Value="True">
+                    <Setter Property="Background" Value="#FF18191B"/>
+                </Trigger>
+                <Trigger Property="IsPressed" Value="True">
+                    <Setter Property="Background" Value="#FF5E6DA9"/>
+                </Trigger>
+            </Style.Triggers>
+        </Style>
+        
+        <Style x:Key="BlackThemeListBox" TargetType="ListBox">
+            <Style.Setters>
+                <Setter Property="Background" Value="#FF46484C"/>
+                <Setter Property="Foreground" Value="#FFE5E5EC"/>
+                <Setter Property="BorderBrush" Value="Black"/>
+                <Setter Property="FontFamily" Value="Bahnschrift"/>
+                <Setter Property="FontSize" Value="14"/>
+            </Style.Setters>
+        </Style>
+
+        <Style x:Key="BlackThemeHeader" TargetType="TextBlock">
+            <Style.Setters>
+                <Setter Property="FontFamily" Value="Nexa Heavy"/>
+                <Setter Property="FontSize" Value="14"/>
+                <Setter Property="TextWrapping" Value="NoWrap"/>
+                <Setter Property="Foreground" Value="#FFE5E5EC"/>
+            </Style.Setters>
+        </Style>
+
+        <Style x:Key="BlackThemeWindow" TargetType="Window">
+            <Style.Setters>
+                <Setter Property="WindowStyle" Value="None"/>
+                <Setter Property="ResizeMode" Value="NoResize"/>
+                <Setter Property="SizeToContent" Value="WidthAndHeight"/>
+                <Setter Property="Background" Value="#FF333437"/>
+                <Setter Property="BorderThickness" Value="1"/>
+                <Setter Property="BorderBrush" Value="#FF1F1F1F"/>
+                <Setter Property="Foreground" Value="{x:Null}"/>
+                
+            </Style.Setters>
+        </Style>
+
+        <Style x:Key="TopBarButton" TargetType="Button">
+            <Style.Setters>
+                <Setter Property="Width" Value="20"/>
+                <Setter Property="Height" Value="20"/>
+                <Setter Property="BorderBrush" Value="{x:Null}"/>
+                <Setter Property="HorizontalAlignment" Value="Right"/>
+                <Setter Property="BorderThickness" Value="0"/>
+                <Setter Property="Template">
+                    <Setter.Value>
+                        <ControlTemplate TargetType="{x:Type Button}">
+                            <Border Background="{TemplateBinding Background}">
+                                <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"></ContentPresenter>
+                            </Border>
+                        </ControlTemplate>
+                    </Setter.Value>
+                </Setter>
+            </Style.Setters>
+        </Style>
+    </Application.Resources>
+</Application>
