@@ -26,7 +26,7 @@ namespace robo_calendar
 
         private void Yes_Click(object sender, RoutedEventArgs e)
         {
-            Environment.Exit(0);
+            Application.Current.Shutdown();
         }
 
         private void No_Click(object sender, RoutedEventArgs e)

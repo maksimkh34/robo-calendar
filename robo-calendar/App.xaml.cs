@@ -10,16 +10,22 @@ namespace robo_calendar
     /// </summary>
     public partial class App : Application
     {
-        public static Dictionary<string, string> AppSettings = new Dictionary<string, string>();
+        public static Dictionary<string, string> AppSettings = [];
+        public static string PathToSettings = "settings";
         public void LoadSettings()
         {
-
+            AppSettings = DataProvider.LoadDataDict(PathToSettings);
+            AppSettings.TryAdd("Theme", "Black");
         }
 
         private void Application_Startup(object sender, StartupEventArgs e)
         {
-            AppSettings.Add("Theme", "Black");
             LoadSettings();
+        }
+
+        private void Application_Exit(object sender, ExitEventArgs e)
+        {
+            DataProvider.WriteDataDict(PathToSettings, AppSettings);
         }
     }
 }
