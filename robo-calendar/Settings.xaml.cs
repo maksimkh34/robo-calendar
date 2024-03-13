@@ -34,6 +34,30 @@ namespace robo_calendar
             Close();
         }
 
-        private void Border_MouseDonw_Trigger(object sender, RoutedEventArgs e) => DragMove();
+        private void Border_MouseDown(object sender, MouseButtonEventArgs e) => DragMove();
+
+        private void Cancel_Click(object sender, RoutedEventArgs e)
+        {
+            Close();
+        }
+
+        void UpdateLockedElements(Settings window)
+        {
+            bool isChecked = (bool)window.DefaultSettingsChkbx.IsChecked;
+            window.address_textbox.IsEnabled = !isChecked;
+            window.passwd_textbox.IsEnabled = !isChecked;
+            window.port_textbox.IsEnabled = !isChecked;
+            window.username_textbox.IsEnabled = !isChecked;
+        }
+
+        private void Window_Loaded(object sender, RoutedEventArgs e)
+        {
+            UpdateLockedElements(this);
+        }
+
+        private void DefaultSettingsChkbx_Checked(object sender, RoutedEventArgs e)
+        {
+            UpdateLockedElements(this);
+        }
     }
 }

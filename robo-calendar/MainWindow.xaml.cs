@@ -69,5 +69,10 @@ namespace robo_calendar
             Settings settings = new();
             settings.ShowDialog();
         }
+
+        private void Window_Loaded(object sender, RoutedEventArgs e)
+        {
+
+        }
     }
 }

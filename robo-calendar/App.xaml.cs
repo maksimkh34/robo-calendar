@@ -9,6 +9,7 @@ namespace robo_calendar
     /// </summary>
     public partial class App : Application
     {
+        static public Dictionary<string, string> AppSettings = [];
     }
 
 }

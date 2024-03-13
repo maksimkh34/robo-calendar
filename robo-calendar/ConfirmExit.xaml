@@ -5,6 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:robo_calendar"
         mc:Ignorable="d"
+        Loaded="Window_Loaded"
         Style="{StaticResource BlackThemeWindow}"
         Title="Выход">
     <Grid>
