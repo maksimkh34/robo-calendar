@@ -48,7 +48,17 @@ namespace robo_calendar
 
         private void Window_Loaded(object sender, RoutedEventArgs e)
         {
-
+            if(App.AppSettings["Theme"] == "default")
+            {
+                TopBarBorder.Visibility = Visibility.Hidden;
+                TopBarBorder.Margin = new Thickness(0, 0, 0, -20);
+                WindowStyle = WindowStyle.SingleBorderWindow;
+               
+                Style = FindResource("EmptyStyle") as Style;
+                Yes.Style = FindResource("EmptyStyle") as Style;
+                No.Style = FindResource("EmptyStyle") as Style;
+                ConfirmExitTextBlock.Style = FindResource("EmptyStyle") as Style;
+            }
         }
     }
 }

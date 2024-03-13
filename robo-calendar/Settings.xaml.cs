@@ -59,5 +59,17 @@ namespace robo_calendar
         {
             UpdateLockedElements(this);
         }
+
+        private void Apply_Click(object sender, RoutedEventArgs e)
+        {
+            if(ThemeComboBox.Text == "Стандартная")
+            {
+                App.AppSettings["Theme"] = "default";
+            } else
+            {
+                App.AppSettings["Theme"] = "Black";
+            }
+            Close();
+        }
     }
 }

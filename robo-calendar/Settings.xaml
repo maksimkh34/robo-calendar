@@ -28,7 +28,7 @@
             <GroupBox Style="{StaticResource BlackThemeGroupBox}" FontSize="16" Header="Внешний вид" MinWidth="200" Margin="5,5,5,5">
                     <Grid>
                         <TextBlock Style="{StaticResource BlackThemeLabel}" Margin="5,2,5,0" FontSize="18">Тема</TextBlock>
-                    <ComboBox HorizontalAlignment="Right" Margin="0,0,5,5">
+                    <ComboBox x:Name="ThemeComboBox" HorizontalAlignment="Right" Margin="0,0,5,5">
                         <ComboBoxItem IsSelected="True">Тёмная</ComboBoxItem>
                         <ComboBoxItem>Светлая</ComboBoxItem>
                         <ComboBoxItem>Стандартная</ComboBoxItem>
@@ -49,7 +49,7 @@
                     <PasswordBox x:Name="passwd_textbox" HorizontalAlignment="Right" VerticalAlignment="Top" Margin="0,105,0,0" Width="150"></PasswordBox>
                 </Grid>
             </GroupBox>
-            <Button Style="{StaticResource BlackThemeButton}" Margin="5,5,5,5" Height="25">Применить</Button>
+            <Button x:Name="Apply" Style="{StaticResource BlackThemeButton}" Margin="5,5,5,5" Height="25" Click="Apply_Click">Применить</Button>
             <Button Style="{StaticResource BlackThemeButton}" Margin="5,0,5,5" Height="25" Click="Cancel_Click">Отмена</Button>
         </StackPanel>
     </Grid>

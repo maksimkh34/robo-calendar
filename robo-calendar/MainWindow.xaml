@@ -5,11 +5,13 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         mc:Ignorable="d"
         Loaded="Window_Loaded"
+        ResizeMode="NoResize"
+        SizeToContent="WidthAndHeight"
         Style="{StaticResource BlackThemeWindow}"
         Title="ATM">
     <Grid>
         <StackPanel Orientation="Vertical">
-            <Border Height="20" OpacityMask="Black" Background="#FF28292D" MouseDown="Border_MouseDonw_Trigger">
+            <Border x:Name="TopBarBorder" Height="20" OpacityMask="Black" Background="#FF28292D" MouseDown="Border_MouseDonw_Trigger">
                 <Grid>
                     <TextBlock FontSize="14" Margin="5,2,0,0" FontFamily="Bahnschrift" Foreground="#FFE5E5EC">Меню</TextBlock>
                     <Button Style="{StaticResource TopBarButton}" Click="Minimize_TopBar_Click" x:Name="Minimize_TopBar" Margin="0,0,18,0">
