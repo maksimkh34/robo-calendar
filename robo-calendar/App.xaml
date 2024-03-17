@@ -74,7 +74,6 @@
             <Style.Setters>
                 <Setter Property="FontFamily" Value="Nexa Heavy"/>
                 <Setter Property="FontSize" Value="14"/>
-                <Setter Property="TextWrapping" Value="NoWrap"/>
                 <Setter Property="Foreground" Value="#FFE5E5EC"/>
             </Style.Setters>
         </Style>
@@ -103,85 +102,6 @@
         <Style x:Key="BlackThemeGroupBox" TargetType="GroupBox">
             <Style.Setters>
                 <Setter Property="Foreground" Value="#FFE5E5EC"/>
-                <Setter Property="FontFamily" Value="Bahnschrift"/>
-                <Setter Property="FontSize" Value="13"/>
-
-            </Style.Setters>
-        </Style>
-
-        <!-- While theme styles -->
-        <Style x:Key="WhiteThemeButton" TargetType="Button">
-
-            <Style.Setters>
-                <Setter Property="FontFamily" Value="Bahnschrift"/>
-                <Setter Property="FontSize" Value="13"/>
-                <Setter Property="Background" Value="#FFE5E5EC"/>
-                <Setter Property="Foreground" Value="#FF2C2D31"/>
-                <Setter Property="BorderBrush" Value="CadetBlue"/>
-                <Setter Property="Template">
-                    <Setter.Value>
-                        <ControlTemplate TargetType="{x:Type Button}">
-                            <Border Background="{TemplateBinding Background}" BorderBrush="White" BorderThickness="1">
-                                <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"></ContentPresenter>
-                            </Border>
-                        </ControlTemplate>
-                    </Setter.Value>
-                </Setter>
-            </Style.Setters>
-
-            <Style.Triggers>
-                <Trigger Property="IsMouseOver" Value="True">
-                    <Setter Property="Background" Value="#FFE5E5EC"/>
-                </Trigger>
-                <Trigger Property="IsPressed" Value="True">
-                    <Setter Property="Background" Value="#FF5E6DA9"/>
-                </Trigger>
-            </Style.Triggers>
-        </Style>
-
-        <Style x:Key="WhiteThemeListBox" TargetType="ListBox">
-            <Style.Setters>
-                <Setter Property="Background" Value="#FFE5E5EC"/>
-                <Setter Property="Foreground" Value="#FF46484C"/>
-                <Setter Property="BorderBrush" Value="White"/>
-                <Setter Property="FontFamily" Value="Bahnschrift"/>
-                <Setter Property="FontSize" Value="14"/>
-            </Style.Setters>
-        </Style>
-
-        <Style x:Key="WhiteThemeHeader" TargetType="TextBlock">
-            <Style.Setters>
-                <Setter Property="FontFamily" Value="Nexa Heavy"/>
-                <Setter Property="FontSize" Value="14"/>
-                <Setter Property="TextWrapping" Value="NoWrap"/>
-                <Setter Property="Foreground" Value="#FF46484C"/>
-            </Style.Setters>
-        </Style>
-
-        <Style x:Key="WhiteThemeLabel" TargetType="TextBlock">
-            <Style.Setters>
-                <Setter Property="FontFamily" Value="Bahnschrift"/>
-                <Setter Property="TextWrapping" Value="NoWrap"/>
-                <Setter Property="Foreground" Value="#FF46484C"/>
-            </Style.Setters>
-        </Style>
-
-        <Style x:Key="WhiteThemeWindow" TargetType="Window">
-            <Style.Setters>
-                <Setter Property="WindowStyle" Value="None"/>
-                <Setter Property="ResizeMode" Value="NoResize"/>
-                <Setter Property="SizeToContent" Value="WidthAndHeight"/>
-                <Setter Property="Background" Value="#FFE5E5EC"/>
-                <Setter Property="BorderThickness" Value="1"/>
-                <Setter Property="BorderBrush" Value="Black"/>
-                <Setter Property="Foreground" Value="{x:Null}"/>
-
-            </Style.Setters>
-        </Style>
-
-        <Style x:Key="WhiteThemeGroupBox" TargetType="GroupBox">
-            <Style.Setters>
-                <Setter Property="Foreground" Value="#FF46484C"/>
                 <Setter Property="FontFamily" Value="Bahnschrift"/>
                 <Setter Property="FontSize" Value="13"/>
 

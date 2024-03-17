@@ -1,16 +1,5 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows;
-using System.Windows.Controls;
-using System.Windows.Data;
-using System.Windows.Documents;
+﻿using System.Windows;
 using System.Windows.Input;
-using System.Windows.Media;
-using System.Windows.Media.Imaging;
-using System.Windows.Shapes;
 
 namespace robo_calendar
 {
@@ -53,6 +42,12 @@ namespace robo_calendar
         private void Window_Loaded(object sender, RoutedEventArgs e)
         {
             UpdateLockedElements(this);
+            if (App.AppSettings["Theme"] == "default")
+            {
+                BlackThemeComboBoxItem.IsSelected = false;
+                DefaultThemeComboBoxItem.IsSelected = true;
+            }
+            App.SetTheme(this, TopBarBorder);
         }
 
         private void DefaultSettingsChkbx_Checked(object sender, RoutedEventArgs e)
@@ -62,12 +57,15 @@ namespace robo_calendar
 
         private void Apply_Click(object sender, RoutedEventArgs e)
         {
-            if(ThemeComboBox.Text == "Стандартная")
+            if (ThemeComboBox.Text == "Стандартная" && App.AppSettings["Theme"] != "default")
             {
                 App.AppSettings["Theme"] = "default";
-            } else
+                App.RestartApp();
+            }
+            else if (ThemeComboBox.Text == "Тёмная" && App.AppSettings["Theme"] != "Black")
             {
                 App.AppSettings["Theme"] = "Black";
+                App.RestartApp();
             }
             Close();
         }

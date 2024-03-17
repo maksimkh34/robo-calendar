@@ -5,6 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:robo_calendar"
         mc:Ignorable="d"
+        WindowStartupLocation="CenterScreen"
         Loaded="Window_Loaded"
         ResizeMode="NoResize"
         SizeToContent="WidthAndHeight"

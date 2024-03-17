@@ -72,7 +72,7 @@ namespace robo_calendar
 
         private void Window_Loaded(object sender, RoutedEventArgs e)
         {
-
+            App.SetTheme(this, TopBarBorder);
         }
     }
 }
