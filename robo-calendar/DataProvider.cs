@@ -1,10 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.IO;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows.Input;
+﻿using System.IO;
 
 namespace robo_calendar
 {
@@ -13,9 +7,10 @@ namespace robo_calendar
         public static Dictionary<string, string> LoadDataDict(string fileName, char delimeter = '=')
         {
             Dictionary<string, string> result = [];
-            string[] text = [];
+            string[] text;
             try { text = File.ReadAllLines(fileName); }
-            catch(FileNotFoundException) {
+            catch (FileNotFoundException)
+            {
                 File.Create(fileName).Close();
                 text = File.ReadAllLines(fileName);
             }
